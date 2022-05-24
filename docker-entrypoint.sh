@@ -95,7 +95,7 @@ ssh-add ~/.ssh/id_rsa
 
 echo "Add known hosts"
 ssh-keyscan -p $INPUT_REMOTE_DOCKER_PORT "$SSH_HOST" >> ~/.ssh/known_hosts
-ssh-keyscan -p $INPUT_REMOTE_DOCKER_PORT "$SSH_HOST" >> /etc/ssh/ssh_known_hosts
+cat ~/.ssh/known_hosts >> /etc/ssh/ssh_known_hosts
 
 set context
 echo "Create docker context"
