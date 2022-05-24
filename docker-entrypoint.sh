@@ -68,7 +68,7 @@ fi
 case $INPUT_DEPLOYMENT_MODE in
 
   docker-swarm)
-    DEPLOYMENT_COMMAND="docker $DEPLOYMENT_COMMAND_OPTIONS stack deploy --compose-file $STACK_FILE"
+    DEPLOYMENT_COMMAND="docker $DEPLOYMENT_COMMAND_OPTIONS stack deploy --with-registry-auth --compose-file $STACK_FILE"
   ;;
 
   *)
